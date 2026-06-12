@@ -34,7 +34,7 @@ def load_model() -> Llama:
 
     print(f"[startup] repo={MODEL_REPO}", flush=True)
     print(f"[startup] file={MODEL_FILE}", flush=True)
-    print("[startup] loading model with CPU-only llama.cpp settings", flush=True)
+    print("[startup] loading model with CUDA llama.cpp settings", flush=True)
     log_memory("before_model_load")
     started = time.time()
 
@@ -43,7 +43,7 @@ def load_model() -> Llama:
         filename=MODEL_FILE,
         n_ctx=N_CTX,
         n_threads=max(1, os.cpu_count() or 1),
-        n_gpu_layers=0,
+        n_gpu_layers=-1,
         verbose=True,
     )
 
