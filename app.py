@@ -90,9 +90,8 @@ with gr.Blocks(title="Minimal Qwen llama-cpp CPU") as demo:
     )
     gr.ChatInterface(
         fn=generate_response,
-        chatbot=gr.Chatbot(type="messages", height=420),
+        chatbot=gr.Chatbot(height=420),
         textbox=gr.Textbox(placeholder="Ask a short test question", scale=7),
-        type="messages",
         examples=[
             "Say hello in one sentence.",
             "What is 2 + 2?",
