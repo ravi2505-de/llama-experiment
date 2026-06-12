@@ -1,4 +1,7 @@
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+--only-binary=llama-cpp-python
+
 gradio
 huggingface-hub
-llama-cpp-python
 psutil
+llama-cpp-python==0.3.28
