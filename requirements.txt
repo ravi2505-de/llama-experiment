@@ -1,0 +1,4 @@
+gradio
+huggingface-hub
+llama-cpp-python
+psutil
